@@ -1,0 +1,6 @@
+@traveler_companion_HostAddress = http://localhost:5090
+
+GET {{traveler_companion_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
