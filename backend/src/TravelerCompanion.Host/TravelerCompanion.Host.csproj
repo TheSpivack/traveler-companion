@@ -4,10 +4,13 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>TravelerCompanion</RootNamespace>
+        <RootNamespace>TravelerCompanion.Host</RootNamespace>
+        <AssemblyName>travelercompanion.host</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.8.11" />
+        <PackageReference Include="Hangfire.MemoryStorage" Version="1.8.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2" />
         <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
         <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
@@ -16,6 +19,10 @@
         <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
         <PackageReference Include="Serilog.Sinks.Seq" Version="6.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TravelerCompanion.SouthwestJobs\TravelerCompanion.SouthwestJobs.csproj" />
     </ItemGroup>
 
 </Project>

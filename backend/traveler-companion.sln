@@ -1,6 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "traveler-companion", "traveler-companion\traveler-companion.csproj", "{B7E62CCE-D0C4-4E6B-906B-E032FC54A6D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerCompanion.Host", "src\TravelerCompanion.Host\TravelerCompanion.Host.csproj", "{B7E62CCE-D0C4-4E6B-906B-E032FC54A6D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerCompanion", "src\TravelerCompanion\TravelerCompanion.csproj", "{AE91E5C7-9439-46BB-B064-D8D349B95D69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerCompanion.Tests", "tests\TravelerCompanion.Tests\TravelerCompanion.Tests.csproj", "{138CC5E8-01D4-451B-B8B5-F1E20F03EDBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8A64833-6416-4CCF-A03D-4451E4A50BAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1EB21B9B-2FDB-4AFA-B6D6-C059BB7D5820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelerCompanion.SouthwestJobs", "src\TravelerCompanion.SouthwestJobs\TravelerCompanion.SouthwestJobs.csproj", "{85B61CCF-ABD1-47E4-8ACF-A7CEB231CCB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +22,23 @@ Global
 		{B7E62CCE-D0C4-4E6B-906B-E032FC54A6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7E62CCE-D0C4-4E6B-906B-E032FC54A6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7E62CCE-D0C4-4E6B-906B-E032FC54A6D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE91E5C7-9439-46BB-B064-D8D349B95D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE91E5C7-9439-46BB-B064-D8D349B95D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE91E5C7-9439-46BB-B064-D8D349B95D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE91E5C7-9439-46BB-B064-D8D349B95D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{138CC5E8-01D4-451B-B8B5-F1E20F03EDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{138CC5E8-01D4-451B-B8B5-F1E20F03EDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{138CC5E8-01D4-451B-B8B5-F1E20F03EDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{138CC5E8-01D4-451B-B8B5-F1E20F03EDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B61CCF-ABD1-47E4-8ACF-A7CEB231CCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B61CCF-ABD1-47E4-8ACF-A7CEB231CCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B61CCF-ABD1-47E4-8ACF-A7CEB231CCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B61CCF-ABD1-47E4-8ACF-A7CEB231CCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE91E5C7-9439-46BB-B064-D8D349B95D69} = {F8A64833-6416-4CCF-A03D-4451E4A50BAC}
+		{B7E62CCE-D0C4-4E6B-906B-E032FC54A6D6} = {F8A64833-6416-4CCF-A03D-4451E4A50BAC}
+		{138CC5E8-01D4-451B-B8B5-F1E20F03EDBE} = {1EB21B9B-2FDB-4AFA-B6D6-C059BB7D5820}
+		{85B61CCF-ABD1-47E4-8ACF-A7CEB231CCB2} = {F8A64833-6416-4CCF-A03D-4451E4A50BAC}
 	EndGlobalSection
 EndGlobal
