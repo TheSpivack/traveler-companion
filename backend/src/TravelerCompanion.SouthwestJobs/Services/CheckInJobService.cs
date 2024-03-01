@@ -43,7 +43,6 @@ public class CheckInJobService(IBackgroundJobStateRepository<PrepareCheckInJobSt
                 DepartureAirport = flightBound.DepartureAirport,
                 DepartureTime = flightBound.DepartureTime,
                 ArrivalAirport = flightBound.ArrivalAirport,
-                ArrivalTime = flightBound.ArrivalTime,
                 RequestHeaders = reservation.RequestHeaders,
                 RunAt = flightBound.DepartureTime.AddDays(-1).AddSeconds(-5)
             }
@@ -55,7 +54,6 @@ public class CheckInJobService(IBackgroundJobStateRepository<PrepareCheckInJobSt
                 DepartureAirport = flightBound.DepartureAirport,
                 DepartureTime = flightBound.DepartureTime,
                 ArrivalAirport = flightBound.ArrivalAirport,
-                ArrivalTime = flightBound.ArrivalTime,
                 RunAt = flightBound.DepartureTime.AddDays(-1).AddMinutes(-20)
             };
 

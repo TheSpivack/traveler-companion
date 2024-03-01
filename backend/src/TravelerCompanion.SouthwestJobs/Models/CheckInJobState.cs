@@ -36,11 +36,6 @@ public abstract class CheckInJobState : SingleShotJobState
     /// Departure airport information.
     /// </summary>
     public required AirportInfo ArrivalAirport { get; set; }
-    
-    /// <summary>
-    /// Arrival time
-    /// </summary>
-    public required DateTimeOffset ArrivalTime { get; set; }
 }
 
 

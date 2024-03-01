@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json.Nodes;
@@ -202,7 +202,7 @@ public class SouthwestWebDriver(IHttpClientFactory httpClientFactory, IAirportDa
         }
 
         var flightsBounds = new List<FlightBoundInformation>();
-        foreach (var bound in reservationInfo["bounds"]?.AsArray() ?? [])
+        foreach (var bound in reservationInfo["viewReservationViewPage"]?["bounds"]?.AsArray() ?? [])
         {
             var flightBound = await GetFlightBoundInformationAsync(bound);
             if (flightBound is not null)
@@ -253,8 +253,7 @@ public class SouthwestWebDriver(IHttpClientFactory httpClientFactory, IAirportDa
         (
             departureAirport,
             GetFlightTime(bound["departureDate"], bound["departureTime"], departureAirport),
-            arrivalAirport,
-            GetFlightTime(bound["arrivalDate"], bound["arrivalTime"], arrivalAirport)
+            arrivalAirport
         );
         
         DateTimeOffset GetFlightTime(JsonNode? dateNode, JsonNode? timeNode, AirportInfo airport)

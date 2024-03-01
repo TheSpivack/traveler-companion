@@ -29,7 +29,6 @@ public class PrepareCheckInJob(
             DepartureAirport = checkIn.DepartureAirport,
             DepartureTime = checkIn.DepartureTime,
             ArrivalAirport = checkIn.ArrivalAirport,
-            ArrivalTime = checkIn.ArrivalTime,
             RequestHeaders = headers,
             RunAt = checkIn.DepartureTime.AddDays(-1).AddSeconds(-5)
         });
