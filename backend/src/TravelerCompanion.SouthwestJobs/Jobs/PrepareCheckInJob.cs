@@ -30,7 +30,7 @@ public class PrepareCheckInJob(
             DepartureTime = checkIn.DepartureTime,
             ArrivalAirport = checkIn.ArrivalAirport,
             RequestHeaders = headers,
-            RunAt = checkIn.DepartureTime.AddDays(-1).AddSeconds(-5)
+            RunAt = checkIn.DepartureTime.AddHours(-24).AddSeconds(-5)
         });
 
         return checkIn;

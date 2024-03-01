@@ -34,7 +34,7 @@ public class CheckInJobService(IBackgroundJobStateRepository<PrepareCheckInJobSt
     public CheckInJobState CreateCheckInJobState(ReservationMonitorState reservation,
         FlightBoundInformation flightBound)
     {
-        return flightBound.DepartureTime > DateTimeOffset.Now.AddDays(-1).AddMinutes(-20)
+        return flightBound.DepartureTime < DateTimeOffset.Now.AddHours(24).AddMinutes(20)
             ? new PerformCheckInJobState
             {
                 ConfirmationNumber = reservation.ConfirmationNumber,
@@ -44,7 +44,7 @@ public class CheckInJobService(IBackgroundJobStateRepository<PrepareCheckInJobSt
                 DepartureTime = flightBound.DepartureTime,
                 ArrivalAirport = flightBound.ArrivalAirport,
                 RequestHeaders = reservation.RequestHeaders,
-                RunAt = flightBound.DepartureTime.AddDays(-1).AddSeconds(-5)
+                RunAt = flightBound.DepartureTime.AddHours(-24).AddSeconds(-5)
             }
             : new PrepareCheckInJobState
             {
@@ -54,7 +54,7 @@ public class CheckInJobService(IBackgroundJobStateRepository<PrepareCheckInJobSt
                 DepartureAirport = flightBound.DepartureAirport,
                 DepartureTime = flightBound.DepartureTime,
                 ArrivalAirport = flightBound.ArrivalAirport,
-                RunAt = flightBound.DepartureTime.AddDays(-1).AddMinutes(-20)
+                RunAt = flightBound.DepartureTime.AddHours(-24).AddMinutes(-20)
             };
 
     }

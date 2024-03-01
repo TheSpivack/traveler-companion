@@ -13,7 +13,7 @@ namespace TravelerCompanion.SouthwestJobs.Models;
 public class PerformCheckInJobState : CheckInJobState, ISouthwestBaseJobState
 {
     public override string JobKey =>
-        (ConfirmationNumber, FirstName, LastName, DepartureAirport.Code, DepartureTime).ToSouthwestPrepareCheckInJobKey();
+        (ConfirmationNumber, FirstName, LastName, DepartureAirport.Code, DepartureTime).ToSouthwestPerformCheckInJobKey();
     
     [JsonIgnore]
     public IDictionary<string, string> RequestHeaders { get; set; } = new Dictionary<string, string>();
